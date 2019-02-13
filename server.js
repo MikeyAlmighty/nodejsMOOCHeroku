@@ -55,6 +55,12 @@ app.get("/bad", (req, resp) => {
   });
 });
 
+app.get("/projects", (req, resp) => {
+  resp.render("projects.hbs", {
+    pageTitle: "Projects"
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server listeing on port ${port}`);
 });
